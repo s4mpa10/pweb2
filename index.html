@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Barra de Navegação</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo da barra de navegação */
+        .navbar {
+            background-color: #004d26; /* Verde escuro */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #006b3c; /* Verde um pouco mais claro ao passar o mouse */
+        }
+
+        /* Estilo das seções */
+        section {
+            padding: 60px 20px;
+            min-height: 100vh;
+            padding-top: 70px; /* Espaço extra para compensar a barra fixa */
+        }
+
+        #inicio {
+            background-color: #e6ffe6;
+        }
+
+        #sobre {
+            background-color: #ccffcc;
+        }
+
+        #servicos {
+            background-color: #b3ffb3;
+        }
+
+        #contato {
+            background-color: #99ff99;
+        }
+
+        /* Estilo do footer */
+        footer {
+            background-color: #004d26; /* Mesmo verde escuro da barra de navegação */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        /* Layout do conteúdo no footer */
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-content p, .footer-content a {
+            margin: 5px 0;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-content a:hover {
+            color: #99ff99; /* Verde claro ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegação -->
+    <div class="navbar">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </div>
+
+    <!-- Seções da página -->
+    <section id="inicio">
+        <h1>Início</h1>
+        <p>Bem-vindo à nossa página. Use a barra de navegação para explorar mais.</p>
+    </section>
+
+    <section id="sobre">
+        <h1>Sobre</h1>
+        <p>Esta é a seção sobre nós. Aqui você encontra informações sobre nossa história e missão.</p>
+    </section>
+
+    <section id="servicos">
+        <h1>Serviços</h1>
+        <p>Confira nossos serviços. Trabalhamos para oferecer o melhor para você.</p>
+    </section>
+
+    <section id="contato">
+        <h1>Contato</h1>
+        <p>Entre em contato conosco através dos nossos canais.</p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
+            <p>Contato: contato@suaempresa.com | Telefone: (11) 1234-5678</p>
+            <p>
+                <a href="https://www.facebook.com/suaempresa" target="_blank">Facebook</a> |
+                <a href="https://www.instagram.com/suaempresa" target="_blank">Instagram</a> |
+                <a href="https://www.linkedin.com/company/suaempresa" target="_blank">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script para rolagem lenta -->
+    <script>
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - 60, // Ajuste para compensar a barra fixa
+                    behavior: 'smooth'
+                });
+
+                setTimeout(() => {
+                    window.location.hash = targetId;
+                }, 800); // Atraso para dar tempo de rolar suavemente
+            });
+        });
+    </script>
+
+</body>
+</html>
