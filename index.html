@@ -3,74 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página com Barra de Navegação</title>
+    <title>S4mpa10</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="shortcut icon" href="gifs/logo_ifpi.png" type="image/x-icon">
 </head>
 <body>
 
     <!-- Barra de navegação -->
-    <div class="navbar">
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#contato">Contato</a>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">S4MPA10</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projeto">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Seções da página -->
     <section id="inicio">
-        <h1>Projeto - Alan Sampaio</h1>
-        <a href="piloto/home/templates/">Projeto 01</a>
-        <p>Bem-vindo à nossa página. Use a barra de navegação para explorar mais.</p>
+        <div class="container">
+            <h3 class="alert alert-warning">Alan está Programando!</h3>
+            <div class="d-flex justify-content-center">
+
+                <img src="gifs/gif1.gif" alt="Estou programando." class="sytle_gif">
+            </div>
+        </div>
+    </section>
+
+    <section id="projeto">
+        <div class="container">
+            <h1>Projetos</h1>
+            <p>Esta parte é sobre os projetos desenvolvidos. Aqui você encontra os projetos realizado pelo <b>Alan Sampaio.</b></p>
+            <table class="table table-striped table-light table-bordered table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Link</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Projeto 01</td>
+                    <td><a href="https://piloto-1.vercel.app/">Piloto</a></td>
+                  </tr>
+                  <!-- <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                  </tr> -->
+                </tbody>
+            </table>
+        </div>
     </section>
 
     <section id="sobre">
-        <h1>Sobre</h1>
-        <p>Esta é a seção sobre nós. Aqui você encontra informações sobre nossa história e missão.</p>
-    </section>
-
-    <section id="servicos">
-        <h1>Serviços</h1>
-        <p>Confira nossos serviços. Trabalhamos para oferecer o melhor para você.</p>
+        <div class="container">
+            <h1>Serviços</h1>
+            <p>Confira nossos serviços. Trabalhamos para oferecer o melhor para você.</p>
+        </div>
     </section>
 
     <section id="contato">
-        <h1>Contato</h1>
-        <p>Entre em contato conosco através dos nossos canais.</p>
+        <div class="container">
+            <h1>Contato</h1>
+            <p>Entre em contato conosco através dos nossos canais.</p>
+        </div>
     </section>
 
     <!-- Rodapé -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
-            <p>Contato: contato@suaempresa.com | Telefone: (11) 1234-5678</p>
+            <p>&copy; 2024 S4MPA10. Todos os direitos reservados.</p>
+            <p>Contato: alan.sampaio@s4mpa10.com | Telefone: (86) 99533-8137</p>
             <p>
-                <a href="https://www.facebook.com/suaempresa" target="_blank">Facebook</a> |
-                <a href="https://www.instagram.com/suaempresa" target="_blank">Instagram</a> |
-                <a href="https://www.linkedin.com/company/suaempresa" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/alansampaio.dev" target="_blank">Instagram</a> |
+                <a href="https://www.linkedin.com/company/suaempresa" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/s4mpa10" target="_blank">Github</a>
             </p>
         </div>
     </footer>
 
-    <!-- Script para rolagem lenta -->
-    <script>
-        document.querySelectorAll('.navbar a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-
-                window.scrollTo({
-                    top: targetElement.offsetTop - 60, // Ajuste para compensar a barra fixa
-                    behavior: 'smooth'
-                });
-
-                setTimeout(() => {
-                    window.location.hash = targetId;
-                }, 800); // Atraso para dar tempo de rolar suavemente
-            });
-        });
-    </script>
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

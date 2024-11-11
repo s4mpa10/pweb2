@@ -1,54 +1,31 @@
-/* Estilos gerais */
+/* Ajustes de estilo */
+html {
+    scroll-behavior: smooth;
+    /* Rolagem suave */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-}
-
-/* Estilo da barra de navegação */
-.navbar {
-    background-color: #004d26;
-    /* Verde escuro */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s;
-}
-
-.navbar a:hover {
-    background-color: #006b3c;
-    /* Verde um pouco mais claro ao passar o mouse */
+    padding-top: 56px;
+    /* Compensação da navbar fixa */
 }
 
 /* Estilo das seções */
 section {
     padding: 60px 20px;
     min-height: 100vh;
-    padding-top: 70px;
-    /* Espaço extra para compensar a barra fixa */
 }
 
 #inicio {
     background-color: #e6ffe6;
 }
 
-#sobre {
+#projeto {
     background-color: #ccffcc;
 }
 
-#servicos {
+#sobre {
     background-color: #b3ffb3;
 }
 
@@ -59,26 +36,23 @@ section {
 /* Estilo do footer */
 footer {
     background-color: #004d26;
-    /* Mesmo verde escuro da barra de navegação */
     color: white;
     text-align: center;
     padding: 20px 0;
-    font-size: 14px;
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-content p,
+/* Ajuste dos links do footer */
 .footer-content a {
-    margin: 5px 0;
-    color: white;
+    color: #99ff99;
     text-decoration: none;
+    margin: 0 5px;
 }
 
 .footer-content a:hover {
-    color: #99ff99;
+    color: white;
+}
+.sytle_gif{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
