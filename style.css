@@ -25,7 +25,7 @@ section {
     background-color: #ccffcc;
 }
 
-#sobre {
+#cadastro {
     background-color: #b3ffb3;
 }
 
@@ -55,4 +55,15 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.box-card{
+    display: flex;
+    /* justify-content: center;
+    text-align: center; */
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(214, 214, 214);
+}
+.input-link{
+    margin-top: 14px;
 }
